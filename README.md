@@ -1,1 +1,1 @@
-# ShoppingcCart-BlackBit-Internship
+# ShoppingCart-BlackBit-Internship
