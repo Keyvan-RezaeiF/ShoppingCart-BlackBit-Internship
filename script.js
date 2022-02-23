@@ -1,8 +1,12 @@
+// DOM
+
 const productsDiv = document.querySelector('.products_container')
 const cartItemsCounter = document.querySelector('#cart-items-counter')
 let cartItemsDiv = document.querySelector('.cart_items_container')
 const cartItemCounter = document.querySelector('.item_counter')
 const cartDiv = document.querySelector('.cart_container')
+
+// OOP
 
 class Product {
 	constructor(index, id, name, price, image) {
@@ -28,17 +32,22 @@ class Cart {
   }
 }
 
+// Utils
+
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
   minimumFractionDigits: 0,
 })
 
+// functions
+
 function renderCart() {
   cartItemsDiv.remove();
   cartItemsDiv = document.createElement('div')
   cartItemsDiv.className = "cart_items_container"
   cartDiv.appendChild(cartItemsDiv)
+
   cart.items.map(cartItem => {
     cartItemsDiv.innerHTML += `
       <div class="cart_item">
@@ -133,6 +142,7 @@ function getCartItems() {
     cart.items = [];
     cart.totalPrice = 0;
   }
+
   cart.items.map(cartItem => {
     cartItemsCounter.innerText = Number(cartItemsCounter.innerText) + cartItem.quantity;
   })
@@ -149,8 +159,10 @@ const makeProducts = (data) => {
 
 const productsData = fetch('https://course-api.com/react-store-products')
                           .then(response => response.json())
-                          .then(data => data);
+                          .then(data => data)
+                          .catch(error => console.log("The Error is " + error.message));
 
+// Main
 
 const main = async () => {
   const data = await productsData;
@@ -159,8 +171,6 @@ const main = async () => {
   renderProducts()
   renderCart()
 }
-
-/////////////////////////////////////////////////////////////////////////////////////////////
 
 const products = [];
 let cart = new Cart()
