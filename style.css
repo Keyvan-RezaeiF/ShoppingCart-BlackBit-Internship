@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+h2 {
+    padding: 20px 0;
+}
+
 /* hide scroll bar */
 
 body {
@@ -23,15 +27,18 @@ nav {
     width: 100%;
 }
 
-i {
-    font-weight: 700;
-}
-
 .nav_container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #ff440066;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.links_container a:hover {
+    color: rgba(0, 0, 0, 0.7);
+    transition: 0.5s ease-in-out;
 }
 
 .links_container {
@@ -46,18 +53,18 @@ i {
 }
 
 .rightSide_container {
-    /* display: flex; */
-    /* align-items: flex-end; */
+    display: flex;
+    align-items: center;
 }
 
-.rightSide_container div{
+.rightSide_container div {
     display: inline-block;
     margin: 10px;
 }
 
-/* .rightSide_container span {
-    margin: 0 5px;
-} */
+.rightSide_container a {
+    color: black;
+}
 
 /* Products & Cart Section */
 
@@ -129,7 +136,7 @@ button:hover {
     text-align: center;
 }
 
-.cart_container hr {
+#cart_container hr {
     width: 90%;
     margin-block-start: 0.5em;
     margin-block-end: 0.5em;
@@ -178,3 +185,56 @@ button:hover {
 .cart_items_container .item img:hover {
     transform: scale(1.1);
 }
+
+/* Shopping cart icon */
+
+.gg-shopping-cart {
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    transform: scale(var(--ggs,1));
+    width: 20px;
+    height: 21px;
+    background:
+    linear-gradient(
+    to left,currentColor 12px,
+    transparent 0)
+    no-repeat -1px 6px/18px 2px,
+    linear-gradient(
+    to left,currentColor 12px,
+    transparent 0)
+    no-repeat 6px 14px/11px 2px,
+    linear-gradient(
+    to left,currentColor 12px,
+    transparent 0)
+    no-repeat 0 2px/4px 2px,
+    radial-gradient(
+    circle,currentColor 60%,
+    transparent 40%)
+    no-repeat 12px 17px/4px 4px,
+    radial-gradient(
+    circle,currentColor 60%,
+    transparent 40%)
+    no-repeat 6px 17px/4px 4px
+   }
+
+.gg-shopping-cart::after,
+.gg-shopping-cart::before {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width: 2px;
+    height: 14px;
+    background: currentColor;
+    top: 2px;
+    left: 4px;
+    transform: skew(12deg)
+   }
+
+.gg-shopping-cart::after {
+    height: 10px;
+    top: 6px;
+    left: 16px;
+    transform: skew(-12deg)
+   }

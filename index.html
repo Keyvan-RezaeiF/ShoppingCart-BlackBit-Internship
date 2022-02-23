@@ -6,9 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="./style.css">
 		<link href='https://css.gg/shopping-cart.css' rel='stylesheet'>
-		<!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
 		<title>Shopping Website</title>
-		<script src="https://kit.fontawesome.com/dbd847d60c.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<nav>
@@ -22,15 +20,14 @@
 					<a href="#">Products</a>
 				</div>
 				<div class="rightSide_container">
-					<div>
+					<a href="#cart_container">
 						<i class="gg-shopping-cart"></i>
-						<!-- <span>Cart</span> -->
+					</a>
+					<div>
 						<span id="cart-items-counter">0</span>
-						<!-- <i class="fa-light fa-cart-shopping"></i> -->
 					</div>
 					<div>
 						<span>Login</span>
-						<!-- <i class="fa-light fa-arrow-right-to-bracket"></i> -->
 					</div>
 				</div>
 			</div>
@@ -38,10 +35,10 @@
 		<section>
 			<h2>Products</h2>
 			<div class="products_container">
-				<!-- To add Products with their title and price -->
+				<!-- To add products with their title and price -->
 			</div>
 			<h2>Cart</h2>
-			<div class="cart_container">
+			<div id="cart_container">
 				<div class="header_row">
 					<span>Item</span>
 					<span>Price</span>
@@ -49,7 +46,9 @@
 					<span>Subtotal</span>
 				</div>
 				<hr>
-				<div class="cart_items_container"></div>
+				<div class="cart_items_container">
+					<!-- To add cart items with their image, quantity and subtotal -->
+				</div>
 			</div>
 		</section>
 		<footer>

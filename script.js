@@ -4,7 +4,7 @@ const productsDiv = document.querySelector('.products_container')
 const cartItemsCounter = document.querySelector('#cart-items-counter')
 let cartItemsDiv = document.querySelector('.cart_items_container')
 const cartItemCounter = document.querySelector('.item_counter')
-const cartDiv = document.querySelector('.cart_container')
+const cartDiv = document.querySelector('#cart_container')
 
 // OOP
 
